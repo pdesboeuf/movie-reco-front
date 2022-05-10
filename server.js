@@ -69,7 +69,6 @@ const recommendations = async function getRecommendations(id) {
             };
             
         });
-
         console.log("https://movie-reco-back-ipocppcxga-ew.a.run.app/match/id/" + id + "=>");
         console.log(idMovies);
         return idMovies;
