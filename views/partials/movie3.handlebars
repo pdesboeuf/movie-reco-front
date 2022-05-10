@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <div class="movie">
-    <div class="row mb-2" w-50>
+    <div class="row">
         {{#each movieInfo}}
-        <div class="col-md-4" style="margin-top: 50px;">
+        <div class="col-md-3" style="margin-top: 50px;">
             <div class="card">
                 <div class="thumbnail">
                     <img src="{{this.Poster}}"
@@ -27,42 +27,39 @@
             </div>
         </div>
         {{/each}}
-    </div>
-    <div class="row justify-content-center gx-5">
-        {{#each recMovies}}
-            {{#compareStrings this.Response "True"}}
-                <div class="col d-flex" style="margin-top: 10px;">
-                    <!-- <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"> -->
-                        <!-- <div class="col p-2 d-flex flex-column position-static"> -->
-                            <div class="card h-100">
-                                <div class="col" style="margin-top: 10px;">   
-                                    <img src="{{this.Poster}}"
-                                        class="card-img" alt="{{this.Title}}">
-                                    
-                                    <div class="card-body h-100">
-                                        <h5 class="card-title">{{this.Title}}</h5>
-                                        <p class="card-text"><small class="text-muted">{{this.Country}}</small></p>
-                                        <ul class="list-group">
-                                            <li class="list-group-item">{{this.Year}}</li>
-                                        </ul>
-                                        <ul class="list-group">
-                                            <li class="list-group-item">{{this.Genre}}</li>
-                                        </ul>
-                                        <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <span class="mr-5">
-                                                    <i class="bi bi-trophy"></i>{{this.imdbRating}}</span>
-                                                
-                                            </li>
-                                        </ul>
 
+        <div class="row gx-1">
+            {{#each recMovies}}
+                {{#compareStrings this.Response "True"}}
+                    <div class="col" style="margin-top: 10px;">
+                                <div class="card h-100">
+                                    <div class="col" style="margin-top: 10px;">   
+                                        <img src="{{this.Poster}}"
+                                            class="img-thumbnail" alt="{{this.Title}}">
+                                        
+                                        <div class="card-body h-100">
+                                            <h5 class="card-title">{{this.Title}}</h5>
+                                            <p class="card-text"><small class="text-muted">{{this.Country}}</small></p>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">{{this.Year}}</li>
+                                            </ul>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">{{this.Genre}}</li>
+                                            </ul>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <span class="mr-5">
+                                                        <i class="bi bi-trophy"></i>{{this.imdbRating}}</span>
+                                                    
+                                                </li>
+                                            </ul>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <!-- </div> -->
-                    <!-- </div> -->
-                </div>
-            {{/compareStrings}}
-        {{/each}}
-    </div>
+                    </div>
+                {{/compareStrings}}
+            {{/each}}
+        </div>
+    </div>  
 </div>

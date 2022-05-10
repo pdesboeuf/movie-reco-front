@@ -59,7 +59,7 @@ const recommendations = async function getRecommendations(id) {
     let idMovies = [];
     try {
         const { data } = await axios.get(
-            "http://flask:5000/match/id/" + id
+            "http://localhost:5000/match/id/" + id
         );
         //idMovies = data.map(movie => movie.tconst);
         idMovies = data.map(movie => {
@@ -69,7 +69,7 @@ const recommendations = async function getRecommendations(id) {
             };
             
         });
-        console.log("http://flask:5000/match/id/" + id + "=>");
+        console.log("http://localhost:5000/match/id/" + id + "=>");
         console.log(idMovies);
         return idMovies;
 
@@ -82,17 +82,17 @@ const recommendations = async function getRecommendations(id) {
 const movieInfos = async function getInfos(id, title) {
     try {
         /*const { data } = await axios.get(
-            //"http://flask:5000/search2/id/" + id, {timeout: 5000}
+            //"http://localhost:5000/search2/id/" + id, {timeout: 5000}
             "http://192.168.1.87:5000/search/id/" + id, {timeout: 5000}
         );*/
         const { data } = await axios({
                 method: 'get',
-                url: "http://flask:5000/search/id/" + id,
+                url: "http://localhost:5000/search/id/" + id,
                 timeout: 3000
             });
         //idMovies = data.map(movie => movie.tconst);
-        //console.log("http://flask:5000/search2/id/" + id + "=>");
-        console.log("http://flask:5000/search/id/" + id + "=>");
+        //console.log("http://localhost:5000/search2/id/" + id + "=>");
+        console.log("http://localhost:5000/search/id/" + id + "=>");
         console.log(data);
         if(data.Poster == 'N/A') data.Poster = 'https://imdb-api.com/images/original/nopicture.jpg'
         data.Title = title;
