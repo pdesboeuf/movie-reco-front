@@ -59,7 +59,7 @@ const recommendations = async function getRecommendations(id) {
     let idMovies = [];
     try {
         const { data } = await axios.get(
-            "http://localhost:5000/match/id/" + id
+            "https://movie-reco-back-ipocppcxga-ew.a.run.app/match/id/" + id
         );
         //idMovies = data.map(movie => movie.tconst);
         idMovies = data.map(movie => {
@@ -69,7 +69,8 @@ const recommendations = async function getRecommendations(id) {
             };
             
         });
-        console.log("http://localhost:5000/match/id/" + id + "=>");
+
+        console.log("https://movie-reco-back-ipocppcxga-ew.a.run.app/match/id/" + id + "=>");
         console.log(idMovies);
         return idMovies;
 
@@ -87,12 +88,12 @@ const movieInfos = async function getInfos(id, title) {
         );*/
         const { data } = await axios({
                 method: 'get',
-                url: "http://localhost:5000/search/id/" + id,
+                url: "https://movie-reco-back-ipocppcxga-ew.a.run.app/search/id/" + id,
                 timeout: 3000
             });
         //idMovies = data.map(movie => movie.tconst);
-        //console.log("http://localhost:5000/search2/id/" + id + "=>");
-        console.log("http://localhost:5000/search/id/" + id + "=>");
+        //console.log("http://flask:5000/search2/id/" + id + "=>");
+        console.log("https://movie-reco-back-ipocppcxga-ew.a.run.app/search/id/" + id + "=>");
         console.log(data);
         if(data.Poster == 'N/A') data.Poster = 'https://imdb-api.com/images/original/nopicture.jpg'
         data.Title = title;

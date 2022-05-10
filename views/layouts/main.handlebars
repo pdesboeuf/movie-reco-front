@@ -31,11 +31,11 @@
             );*/
             const { data } = await axios({
                 method: 'get',
-                url: "http://localhost:5000/search/id/" + id,
+                url: "https://movie-reco-back-ipocppcxga-ew.a.run.app/search/id/" + id,
                 timeout: 3000
             });
             //idMovies = data.map(movie => movie.tconst);
-            console.log("http://localhost:5000/search/id/" + id + "=>");
+            console.log("https://movie-reco-back-ipocppcxga-ew.a.run.app/search/id/" + id + "=>");
             console.log(data);
             if(data.Poster == 'N/A') data.Poster = 'https://imdb-api.com/images/original/nopicture.jpg'
             return data;
@@ -54,7 +54,7 @@
             local: [{"originalTitle":"L'enfant prodigue","tconst":"tt0000591"},{"originalTitle":"Hamlet","tconst":"tt0000886"},{"originalTitle":"Abraham Lincoln's Clemency","tconst":"tt0001101"},{"originalTitle":"L'auberge rouge","tconst":"tt0001122"}],
             // The url points to a json file that contains an array of country names
             prefetch: {
-                url: 'http://localhost:5000/list/'
+                url: 'https://movie-reco-back-ipocppcxga-ew.a.run.app/list/'
                 /*transform: function (data) {          // we modify the prefetch response
                     var newData = [];                 // here to match the response format 
                     data.forEach(function (item) {    // of the remote endpoint
