@@ -1,0 +1,8 @@
+steps:
+- name: "gcr.io/cloud-builders/docker"
+  args:
+  - build
+  - "--tag=gcr.io/movie-reco-349807/movie-reco-front"
+  - "--file=./docker/Dockerfile"
+images:
+- "gcr.io/movie-reco-349807/movie-reco-front"
