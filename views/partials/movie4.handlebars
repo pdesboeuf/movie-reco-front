@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<div class="movie">
+    <div class="row mb-2" w-50>
+        {{#each movieInfo}}
+        <div class="col-md-4" style="margin-top: 50px;">
+            <div class="card">
+                <div class="thumbnail">
+                    <img src="{{this.Poster}}"
+                        class="img-thumbnail" alt="{{this.Title}}">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.Title}}</h5>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">{{this.Year}}</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="container-fluid p-0 m-0 
+                align-items-center 
+                justify-content-center d-flex"
+            style="min-height: 50vh; 
+            background-color: #498433;">
+  
+        <!-- Row for the card-->
+        <div class="row w-100 p-0 w-0">
+            {{#each recMovies}}
+                {{#compareStrings this.Response "True"}}
+                    <!-- Column for card-->
+                    <div class="col-lg-4 mb-2">
+                        <div class="card mx-auto" style="width:13rem; ">
+                            <img class="card-img-top" src="{{this.Poster}}"
+                                        alt="Card image cap">
+          
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Geeks for Geeks
+                                </h5>
+                                <p class="card-text">
+                                    Geeks for Geeks is the best place 
+                                    to improve your computer science
+                                    knowledge.
+                                </p>
+          
+                                  
+                                <a href="#" class="btn btn-success">
+                                    Click me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {{/compareStrings}}
+            {{/each}}
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<div class="movie">
+    <div class="row mb-2" w-50>
+        {{#each movieInfo}}
+        <div class="col-md-4" style="margin-top: 50px;">
+            <div class="card">
+                <div class="thumbnail">
+                    <!-- <img src="{{getPoster this.posters}}" -->
+                    <img src="{{this.image}}"
+                        class="img-thumbnail" alt="{{this.title}}">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.title}}</h5>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">{{this.year}}</li>
+                        </ul>
+                        <ul class="list-group">
+                            <li class="list-group-item">{{this.genres}}</li>
+                        </ul>
+                        <ul class="list-group">
+
+                            <li class="list-group-item"><i class="bi bi-trophy"></i>{{this.imDbRating}}</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="row justify-content-center gx-5">
+        {{#each recMovies}}
+                <div class="col d-flex" style="margin-top: 10px;">
+                    <!-- <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"> -->
+                        <!-- <div class="col p-2 d-flex flex-column position-static"> -->
+                            <div class="card h-100">
+                                <div class="col" style="margin-top: 10px;">   
+                                    <img src="{{this.image}}"
+                                        class="card-img" alt="{{this.title}}">
+                                    
+                                    <div class="card-body h-100">
+                                        <h5 class="card-title">{{this.title}}</h5>
+
+                                        <ul class="list-group">
+                                            <li class="list-group-item">{{this.year}}</li>
+                                        </ul>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">{{this.genres}}</li>
+                                        </ul>
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <span class="mr-5">
+                                                    <i class="bi bi-trophy"></i>{{this.imDbRating}}</span>
+                                                
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+        {{/each}}
+    </div>
+</div>

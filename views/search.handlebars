@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{{>header}}
+<form action="/result" method="get" role="form" enctype="application/x-www-form-urlencoded">
+<div class="row justify-content-center">
+	<div class="col-lg-7" style="margin-top: 50px;">
+		<div class="card text-center">
+			<div class="card-header">
+    			<h3>PGM Machine Learning Movie Recommendation System</h3>
+  			</div>
+		    <div class="card-body">
+		    		<h5>Type your favorite movie</h5>
+			    	    
+			    	    <div id="scrollable-dropdown-menu">	
+			    			<input type="text" class="typeahead tt-query" autocomplete="off" spellcheck="false" name="title" id="title">
+			    		
+
+			    			<input type="hidden" id="tconst_id" name="tconst_id">
+			    		
+			    	
+					    	<button type="submit" class="btn btn-primary">
+					    		Go !
+					    	</button>
+					    	
+			    		</div>
+		    	
+		    </div>
+		    
+		</div>
+	</div>
+</div>
+</form>
+<div class="row justify-content-center" id="searchMovie" style="display: none;">
+	<div class="col-lg-7" style="margin-top: 50px;">
+		<div class="card h-100">
+            <div class="col" style="margin-top: 10px;">   
+                <img id="poster" 
+                    class="card-img">
+                
+                <div class="card-body h-100">
+                    <h5 class="card-title" id="the-title"></h5>
+
+                    <ul class="list-group">
+                        <li class="list-group-item" id="year"></li>
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item" id="genre"></li>
+                    </ul>
+                    <ul class="list-group">
+                        <li class="list-group-item" id="imdbRating"><i class="bi bi-trophy"></i></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+	</div>
+</div>

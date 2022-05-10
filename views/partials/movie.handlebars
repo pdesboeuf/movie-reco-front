@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<div class="movie">
+    <div class="row justify-content-center">
+        {{#each movieInfo}}
+        <div class="col" style="margin-top: 50px;">
+            <div class="card">
+                <div class="thumbnail">
+                    <img src="{{this.Poster}}"
+                        class="img-thumbnail" alt="{{this.Title}}">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.Title}}</h5>
+
+                        <ul class="list-group">
+                            <li class="list-group-item">{{this.Year}}</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="row justify-content-center">
+        {{#each recMovies}}
+                <div class="col" style="margin-top: 50px;">
+                    <div class="card">
+
+                        <div class="thumbnail">
+                            <img src="{{this.Poster}}"
+                                class="img-thumbnail" alt="{{this.Title}}">
+
+                            <div class="card-body">
+                                <h5 class="card-title">{{this.Title}}</h5>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">{{this.Year}}</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        {{/each}}
+    </div>
+</div>
